@@ -1,0 +1,20 @@
+{
+  "theme": "dark",
+  "accent_color": "blue",
+  "temperature_unit": "fahrenheit",
+  "wind_speed_unit": "mph",
+  "weather_alerts": true,
+  "news_notifications": true,
+  "ai_notifications": true,
+  "news_categories": [
+    "general",
+    "technology",
+    "business",
+    "sports"
+  ],
+  "news_sources": [],
+  "default_ai_model": "flash",
+  "language": "en",
+  "compact_mode": false,
+  "save_chat_history": true
+}

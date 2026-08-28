@@ -1,0 +1,437 @@
+@import "tailwindcss";
+
+/* ============================================================
+   KANCHHI GLOBAL THEME
+   ============================================================ */
+
+:root {
+  --background: #0b1220;
+  --foreground: #ffffff;
+
+  --kanchhi-sidebar: #111c2e;
+  --kanchhi-card: #111c2e;
+  --kanchhi-card-hover: #172338;
+
+  --kanchhi-border: #1e293b;
+  --kanchhi-border-light: #334155;
+
+  --kanchhi-blue: #2563eb;
+  --kanchhi-blue-light: #60a5fa;
+
+  --kanchhi-text: #ffffff;
+  --kanchhi-text-secondary: #94a3b8;
+  --kanchhi-text-muted: #64748b;
+}
+
+
+/* ============================================================
+   TAILWIND THEME
+   ============================================================ */
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --font-sans: Arial, Helvetica, sans-serif;
+  --font-mono: "Courier New", monospace;
+}
+
+
+/* ============================================================
+   GLOBAL RESET
+   ============================================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ============================================================
+   KANCHHI APP
+   ============================================================ */
+
+.kanchhi-app {
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--foreground);
+}
+
+
+/* ============================================================
+   CUSTOM SCROLLBAR
+   ============================================================ */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 20px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+
+/* Firefox */
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #334155 #0f172a;
+}
+
+
+/* ============================================================
+   GOOGLE CUSTOM SEARCH
+   ============================================================ */
+
+/*
+   Google CSE is still used for KANCHHI Search.
+
+   These styles make the Google search component
+   match the KANCHHI dark interface.
+*/
+
+
+/* Main Google search container */
+
+.gsc-control-cse {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+
+/* Google tables */
+
+.gsc-control-cse table {
+  background: transparent !important;
+}
+
+
+/* ============================================================
+   GOOGLE SEARCH INPUT
+   ============================================================ */
+
+.gsc-control-cse .gsc-input-box {
+  background: #182235 !important;
+  border: 1px solid #334155 !important;
+  border-radius: 12px !important;
+  min-height: 50px !important;
+  box-shadow: none !important;
+}
+
+
+.gsc-control-cse .gsc-input-box:hover {
+  border-color: #475569 !important;
+}
+
+
+.gsc-control-cse .gsc-input-box:focus-within {
+  border-color: #2563eb !important;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15) !important;
+}
+
+
+/* Input */
+
+.gsc-control-cse .gsc-input {
+  background: transparent !important;
+  color: #ffffff !important;
+  font-size: 16px !important;
+}
+
+
+/* Actual Google input */
+
+.gsc-control-cse input.gsc-input {
+  background: transparent !important;
+  color: #ffffff !important;
+}
+
+
+/* Placeholder */
+
+.gsc-control-cse input.gsc-input::placeholder {
+  color: #64748b !important;
+}
+
+
+/* Remove Google input shadow */
+
+.gsc-input-box input {
+  box-shadow: none !important;
+}
+
+
+/* ============================================================
+   GOOGLE SEARCH BUTTON
+   ============================================================ */
+
+.gsc-control-cse .gsc-search-button-v2 {
+  background: #2563eb !important;
+  border: none !important;
+  border-radius: 10px !important;
+
+  min-height: 48px !important;
+
+  padding: 12px 20px !important;
+
+  margin-left: 8px !important;
+
+  box-shadow: none !important;
+}
+
+
+.gsc-control-cse .gsc-search-button-v2:hover {
+  background: #3b82f6 !important;
+}
+
+
+.gsc-control-cse .gsc-search-button-v2:focus {
+  outline: none !important;
+}
+
+
+/* ============================================================
+   GOOGLE SEARCH RESULTS
+   ============================================================ */
+
+.gsc-results {
+  width: 100% !important;
+}
+
+
+.gsc-result {
+  background: transparent !important;
+}
+
+
+.gsc-webResult.gsc-result {
+  background: #182235 !important;
+
+  border: 1px solid #334155 !important;
+
+  border-radius: 14px !important;
+
+  padding: 18px !important;
+
+  margin-bottom: 14px !important;
+
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    background 0.2s ease !important;
+}
+
+
+.gsc-webResult.gsc-result:hover {
+  background: #1b2940 !important;
+
+  border-color: #475569 !important;
+
+  transform: translateY(-1px);
+}
+
+
+/* ============================================================
+   GOOGLE RESULT TITLE
+   ============================================================ */
+
+.gs-title,
+.gs-title b {
+  color: #60a5fa !important;
+
+  font-size: 18px !important;
+
+  font-weight: 600 !important;
+
+  text-decoration: none !important;
+}
+
+
+.gs-title:hover {
+  color: #93c5fd !important;
+
+  text-decoration: underline !important;
+}
+
+
+/* ============================================================
+   GOOGLE RESULT DESCRIPTION
+   ============================================================ */
+
+.gs-snippet {
+  color: #a8b2c1 !important;
+
+  font-size: 14px !important;
+
+  line-height: 1.6 !important;
+}
+
+
+/* ============================================================
+   GOOGLE RESULT URL
+   ============================================================ */
+
+.gs-visibleUrl {
+  color: #64748b !important;
+
+  font-size: 12px !important;
+}
+
+
+/* ============================================================
+   GOOGLE RESULT INFORMATION
+   ============================================================ */
+
+.gsc-result-info {
+  color: #94a3b8 !important;
+
+  font-size: 13px !important;
+}
+
+
+.gsc-above-wrapper-area {
+  border-bottom: 1px solid #334155 !important;
+}
+
+
+.gsc-result-info-container {
+  color: #94a3b8 !important;
+}
+
+
+/* ============================================================
+   GOOGLE BRANDING
+   ============================================================ */
+
+.gsc-branding {
+  display: none !important;
+}
+
+
+.gcsc-more-maybe-branding-root {
+  display: none !important;
+}
+
+
+/* ============================================================
+   GOOGLE PAGINATION
+   ============================================================ */
+
+.gsc-cursor-box {
+  margin-top: 20px !important;
+}
+
+
+.gsc-cursor-page {
+  color: #60a5fa !important;
+
+  background: transparent !important;
+
+  border: none !important;
+
+  padding: 6px 10px !important;
+
+  border-radius: 6px !important;
+}
+
+
+.gsc-cursor-page:hover {
+  background: #1e293b !important;
+}
+
+
+.gsc-cursor-current-page {
+  color: #ffffff !important;
+
+  background: #2563eb !important;
+
+  padding: 6px 10px !important;
+
+  border-radius: 6px !important;
+}
+
+
+/* ============================================================
+   GOOGLE AUTOCOMPLETE
+   ============================================================ */
+
+.gsc-completion-container {
+  background: #182235 !important;
+
+  border: 1px solid #334155 !important;
+
+  color: #ffffff !important;
+
+  border-radius: 10px !important;
+}
+
+
+.gsc-completion-title {
+  color: #ffffff !important;
+}
+
+
+.gsc-completion-snippet {
+  color: #94a3b8 !important;
+}
+
+
+/* ============================================================
+   GOOGLE ERROR
+   ============================================================ */
+
+.gsc-error {
+  color: #fca5a5 !important;
+
+  background: #450a0a !important;
+
+  border: 1px solid #7f1d1d !important;
+
+  border-radius: 10px !important;
+
+  padding: 12px !important;
+}
+
+
+/* ============================================================
+   SELECTION
+   ============================================================ */
+
+::selection {
+  background: rgba(37, 99, 235, 0.35);
+  color: #ffffff;
+}

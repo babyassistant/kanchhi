@@ -1,0 +1,28 @@
+[
+  {
+    "id": "smart-20260826083606908030",
+    "kind": "weather_alert",
+    "title": "High Rain Probability",
+    "message": "There is a 100% chance of precipitation.",
+    "severity": "medium",
+    "source_key": "weather_alert-rain",
+    "metadata": {
+      "weather_code": 53
+    },
+    "read": true,
+    "created_at": "2026-08-26T08:36:06.908051+00:00"
+  },
+  {
+    "id": "smart-20260827095254379700",
+    "kind": "weather_alert",
+    "title": "High Rain Probability",
+    "message": "There is a 100% chance of precipitation.",
+    "severity": "medium",
+    "source_key": "weather_alert-rain",
+    "metadata": {
+      "weather_code": 2
+    },
+    "read": true,
+    "created_at": "2026-08-27T09:52:54.379740+00:00"
+  }
+]
